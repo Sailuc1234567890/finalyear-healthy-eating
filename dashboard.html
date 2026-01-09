@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Disease Dashboard</title>
+</head>
+<body>
+
+<h2>Select Disease</h2>
+
+<form action="/food" method="post">
+    {% for d in diseases %}
+        <button type="submit" name="disease" value="{{ d }}">
+            {{ d }}
+        </button><br><br>
+    {% endfor %}
+</form>
+
+</body>
+</html>

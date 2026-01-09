@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Food Intake</title>
+</head>
+<body>
+
+<h2>Disease Selected: {{ disease }}</h2>
+
+<form action="/predict" method="post">
+    <input type="hidden" name="disease" value="{{ disease }}">
+
+    Rice (grams): <input type="number" name="rice"><br><br>
+    Dal (grams): <input type="number" name="dal"><br><br>
+    Tea (ml): <input type="number" name="tea"><br><br>
+    Chapati (grams): <input type="number" name="chapati"><br><br>
+
+    <button type="submit">Predict Nutrition Risk</button>
+</form>
+
+</body>
+</html>

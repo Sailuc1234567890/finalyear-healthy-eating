@@ -1,51 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Healthy Food Login</title>
-  <link rel="stylesheet" href="style.css">
+    <title>Nutrition Risk App</title>
 </head>
 <body>
 
-<div class="login-box">
+<h1>Nutrition Risk Prediction App</h1>
+<p>Select a disease to begin analysis</p>
 
-  <!-- LOGIN FORM -->
-  <div id="loginForm">
-    <h2>Login</h2>
-    <p>Eat healthy, live better 🥗</p>
+<form action="/select_disease" method="post">
+    <select name="disease" required>
+        <option value="">-- Select Disease --</option>
+        <option value="Diabetes">Diabetes</option>
+        <option value="Hypertension">Hypertension</option>
+        <option value="Obesity">Obesity</option>
+        <option value="Heart Disease">Heart Disease</option>
+    </select>
+    <br><br>
+    <button type="submit">Next</button>
+</form>
 
-    <input type="text" id="loginUser" placeholder="Username">
-    <input type="password" id="loginPass" placeholder="Password">
-
-    <button onclick="login()">Login</button>
-
-    <p class="switch">
-      New user? <span onclick="showRegister()">Register here</span>
-    </p>
-  </div>
-
-  <!-- REGISTER FORM -->
-  <div id="registerForm" style="display:none;">
-    <h2>Register</h2>
-    <p>Create your healthy account 🍎</p>
-
-    <input type="text" id="regUser" placeholder="Username">
-    <input type="password" id="regPass" placeholder="Password">
-
-    <button onclick="register()">Register</button>
-
-    <p class="switch">
-      Already registered? <span onclick="showLogin()">Login here</span>
-    </p>
-  </div>
-
-  <div class="food-icons">
-    🍎 🥦 🥕 🍓 🥗 🥑 🍊
-  </div>
-
-</div>
-
-<script src="script.js"></script>
 </body>
-
 </html>
